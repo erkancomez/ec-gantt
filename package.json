@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build ec-gantt",
+    "publish:lib": "ng build ec-gantt && cd dist/ec-gantt && npm publish --access public",
     "build:demo": "ng build --base-href /ec-gantt/ && node -e \"require('fs').copyFileSync('dist/ec-gantt-app/browser/index.html', 'dist/ec-gantt-app/browser/404.html')\" && node -e \"require('fs').writeFileSync('dist/ec-gantt-app/browser/.nojekyll', '')\"",
     "deploy": "npm run build:demo && npx gh-pages -d dist/ec-gantt-app/browser",
     "watch": "ng build --watch --configuration development",
