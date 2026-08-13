@@ -1,0 +1,35 @@
+<div class="gantt-container"
+     [style.height]="containerHeightStyle"
+     [style.width]="containerWidthStyle">
+  @if (ganttService.config().showSide && ganttService.config().sideMode !== 'Disabled') {
+    <div class="gantt-side-wrapper" 
+         [style.width.px]="ganttService.config().sideWidth">
+      <gantt-side (rowClick)="rowClick.emit($event)" class="gantt-side-block"></gantt-side>
+    </div>
+
+    <!-- Side Resizer Handle -->
+    @if (ganttService.config().allowSideResizing) {
+      <div class="gantt-resizer-bar"
+           title="Sol paneli daralt / genişlet"
+           (pointerdown)="startSideResize($event)">
+      </div>
+    }
+  }
+
+  <div class="gantt-main-wrapper">
+    <div class="gantt-header-scroll" 
+         [style.height.px]="ganttService.config().headerHeight * ganttService.headers().length">
+      <div class="relative-container" [style.width.px]="ganttService.totalWidth()">
+        <gantt-header></gantt-header>
+      </div>
+    </div>
+    
+    <div class="gantt-body-scroll" (scroll)="onScroll($event)">
+      <div class="relative-container" 
+           [style.width.px]="ganttService.totalWidth()" 
+           [style.height.px]="ganttService.totalBodyHeight()">
+        <gantt-body (taskClick)="taskClick.emit($event)"></gantt-body>
+      </div>
+    </div>
+  </div>
+</div>

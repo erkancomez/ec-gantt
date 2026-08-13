@@ -1,0 +1,33 @@
+{
+  "name": "ec-gantt",
+  "version": "1.0.0",
+  "description": "High-performance, feature-rich Angular Standalone Gantt Chart Component",
+  "author": "Erkan Çömez (https://github.com/ecomez)",
+  "homepage": "https://github.com/ecomez/ec-gantt#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecomez/ec-gantt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ecomez/ec-gantt/issues"
+  },
+  "keywords": [
+    "angular",
+    "gantt",
+    "gantt-chart",
+    "ec-gantt",
+    "timeline",
+    "project-management",
+    "standalone",
+    "signals"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0",
+    "@angular/core": "^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0 || ^22.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
