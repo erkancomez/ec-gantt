@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, inject, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject, ElementRef, AfterViewInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GanttService } from '../services/gantt.service';
 import { GanttApi } from '../services/gantt-api';
 import { GanttConfig, GanttRow, GanttTimespan, GanttTask } from '../models/gantt.models';
@@ -13,7 +13,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, GanttHeaderComponent, GanttBodyComponent, GanttSideComponent],
   providers: [GanttService],
   templateUrl: './gantt-chart.component.html',
-  styleUrls: ['./gantt-chart.component.css']
+  styleUrls: ['../styles.css', './gantt-chart.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class GanttChartComponent implements AfterViewInit, OnDestroy {
   @Input() set config(value: Partial<GanttConfig>) {

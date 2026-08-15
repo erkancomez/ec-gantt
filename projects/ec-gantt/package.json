@@ -1,6 +1,6 @@
 {
   "name": "ec-gantt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High-performance, feature-rich Angular Standalone Gantt Chart Component",
   "author": "Erkan Çömez (https://github.com/erkancomez)",
   "homepage": "https://github.com/erkancomez/ec-gantt#readme",
